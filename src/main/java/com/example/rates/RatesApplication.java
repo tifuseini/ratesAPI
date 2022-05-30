@@ -10,4 +10,5 @@ public class RatesApplication {
 		SpringApplication.run(RatesApplication.class, args);
 	}
 
+
 }
