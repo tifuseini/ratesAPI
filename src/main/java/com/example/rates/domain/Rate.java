@@ -10,4 +10,9 @@ import javax.persistence.Id;
 public class Rate {
 
     @Id
+    private String code;
+
+    private Float rate;
+
+    @
 }
