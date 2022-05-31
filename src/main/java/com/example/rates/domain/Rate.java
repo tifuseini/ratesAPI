@@ -26,5 +26,6 @@ public class Rate {
     @Override
     public String toString(){
         String format = new SimpleDateFormat("yyyy-MM-dd").format(date);
+        return "Rate [code=" + code + ", rate=" + rate + ", date=" + format + "]";
     }
 }
