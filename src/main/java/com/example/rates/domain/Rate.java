@@ -1,5 +1,6 @@
 package com.example.rates.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -14,5 +15,5 @@ public class Rate {
 
     private Float rate;
 
-    @
+    @JsonIgnore
 }
