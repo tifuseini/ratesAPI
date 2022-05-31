@@ -5,6 +5,10 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Entity
 @Data
@@ -16,4 +20,11 @@ public class Rate {
     private Float rate;
 
     @JsonIgnore
+    @Temporal(TemporalType.DATE)
+    private Date date;
+
+    @Override
+    public String toString(){
+        String format = new SimpleDateFormat()
+    }
 }
