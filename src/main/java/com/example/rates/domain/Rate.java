@@ -1,2 +1,4 @@
-package com.example.rates.domain;public class Rate {
+package com.example.rates.domain;
+
+public class Rate {
 }
