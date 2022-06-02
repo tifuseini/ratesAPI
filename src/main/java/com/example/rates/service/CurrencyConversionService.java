@@ -9,4 +9,6 @@ public class CurrencyConversionService {
 
     @Autowired
     RateRepository rateRepository;
+
+    public
 }
