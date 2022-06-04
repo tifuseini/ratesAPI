@@ -25,14 +25,11 @@ public class CurrencyController {
     CurrencyConversionService conversionService;
 
     @RequestMapping("/lastest")
-    public ResponseEntity<CurrencyExchange> getLastest(@RequestParam(name = "base",
-            defaultValue = CurrencyExchange.BASE_CODE)String base) throws  Exception{
-
+    public ResponseEntity<CurrencyExchange> getLatest(@RequestParam(name="base",defaultValue=CurrencyExchange.BASE_CODE)String base) throws Exception{
+        log.info("Number 1");
         return new ResponseEntity<CurrencyExchange>(new CurrencyExchange(base,
                 new SimpleDateFormat("yyyy-MM-dd").format(new Date()),
-                conversionService.calculateByCode(base, new Date()), HttpStatus.OK);
-                log.info("Number 1");
-
+                conversionService.calculateByCode(base,new Date())),HttpStatus.OK);
     }
 
 
