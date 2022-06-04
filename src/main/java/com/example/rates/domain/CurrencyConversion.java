@@ -1,5 +1,8 @@
 package com.example.rates.domain;
 
+import lombok.Data;
+
+@Data
 public class CurrencyConversion {
     
     private String base;
