@@ -12,7 +12,7 @@ public class CurrencyConversionService {
     @Autowired
     RateRepository rateRepository;
 
-    public CurrencyConversion convertFromTo(@ToUpper String base,@ToUpper)
+    public CurrencyConversion convertFromTo(@ToUpper String base,@ToUpper String code)
 
 
 }
