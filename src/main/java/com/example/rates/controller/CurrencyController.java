@@ -44,7 +44,7 @@ public class CurrencyController {
 
     @RequestMapping("/{amount}/{base}/to/{code}")
     public ResponseEntity<CurrencyConversion> conversion(@PathVariable("amount")Float amount,@PathVariable("base")String base,@PathVariable("code")String code) throws Exception{
-        CurrencyConversion conversionResult = service.convertFromTo(base, code, amount);
+        CurrencyConversion conversionResult = conversionService.convertFromTo(base, code, amount);
         return new ResponseEntity<CurrencyConversion>(conversionResult,HttpStatus.OK);
     }
 
