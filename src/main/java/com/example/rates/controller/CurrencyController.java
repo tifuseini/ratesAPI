@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.text.SimpleDateFormat;
+
 @RestController
 @RequestMapping("/currency")
 public class CurrencyController {
@@ -24,7 +26,7 @@ public class CurrencyController {
     public ResponseEntity<CurrencyExchange> getLastest(@RequestParam(name = "base",
             defaultValue = CurrencyExchange.BASE_CODE)String base) throws  Exception{
 
-        return new ResponseEntity<CurrencyExchange>(new CurrencyExchange((base)))
+        return new ResponseEntity<CurrencyExchange>(new CurrencyExchange(base,new SimpleDateFormat()))
 
     }
 
