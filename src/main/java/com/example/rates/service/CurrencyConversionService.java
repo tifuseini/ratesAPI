@@ -25,6 +25,9 @@ public class CurrencyConversionService {
             baseRate = rateRepository.findByDateAndCode(new Date(),base);
 
         if(!CurrencyExchange.BASE_CODE.equals(code))
+            codeRate = rateRepository.findByDateAndCode(new Date(),code);
+
+        if(null == codeRate || null == baseRate)
 
 
         return
