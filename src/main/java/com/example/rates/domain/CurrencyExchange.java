@@ -1,2 +1,7 @@
-package com.example.rates.domain;public class CurrencyExchange {
+package com.example.rates.domain;
+
+public class CurrencyExchange {
+
+
+
 }
