@@ -1,5 +1,6 @@
 package com.example.rates.service;
 
+import com.example.rates.annotation.ToUpper;
 import com.example.rates.domain.CurrencyConversion;
 import com.example.rates.repo.RateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ public class CurrencyConversionService {
     @Autowired
     RateRepository rateRepository;
 
-    public CurrencyConversion convertFromTo(@ToUpper)
+    public CurrencyConversion convertFromTo(@ToUpper String base)
 
 
 }
