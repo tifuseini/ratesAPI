@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class CurrencyConversionService {
@@ -35,6 +36,7 @@ public class CurrencyConversionService {
     }
 
     public Rate[] calculateByCode(@ToUpper String code,Date date) throws Exception{
+        List<Rate> rates rateRepository.findByDate(date);
 
     }
 
