@@ -20,7 +20,9 @@ public class CurrencyController {
     CurrencyConversionService conversionService;
 
     @RequestMapping("/lastest")
-    public ResponseEntity<CurrencyExchange>
+    public ResponseEntity<CurrencyExchange> getLastest(){
+
+    }
 
 
 }
