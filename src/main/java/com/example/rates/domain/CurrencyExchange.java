@@ -8,6 +8,8 @@ public class CurrencyExchange {
 
     private String date;
 
+    private Rate[] rates;
+
 
 
 }
