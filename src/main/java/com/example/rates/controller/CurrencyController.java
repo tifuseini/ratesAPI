@@ -21,7 +21,7 @@ public class CurrencyController {
     CurrencyConversionService conversionService;
 
     @RequestMapping("/lastest")
-    public ResponseEntity<CurrencyExchange> getLastest(@RequestParam(name = "base",defaultValue = CurrencyExchange.BASE_CODE)){
+    public ResponseEntity<CurrencyExchange> getLastest(@RequestParam(name = "base",defaultValue = CurrencyExchange.BASE_CODE)String base){
 
     }
 
