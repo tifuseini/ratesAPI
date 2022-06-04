@@ -36,7 +36,8 @@ public class CurrencyConversionService {
     }
 
     public Rate[] calculateByCode(@ToUpper String code,Date date) throws Exception{
-        List<Rate> rates rateRepository.findByDate(date);
+        List<Rate> rates = rateRepository.findByDate(date);
+
         if(code.equals(CurrencyExchange.BASE_CODE))
             return rates.toArray(new Rate[0]);
 
