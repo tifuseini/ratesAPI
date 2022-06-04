@@ -1,6 +1,7 @@
 package com.example.rates.aop;
 
 import com.example.rates.annotation.ToUpper;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
