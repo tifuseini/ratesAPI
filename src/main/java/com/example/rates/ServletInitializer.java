@@ -1,2 +1,4 @@
-package com.example.rates;public class ServletInitializer {
+package com.example.rates;
+
+public class ServletInitializer {
 }
