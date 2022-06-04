@@ -9,5 +9,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/currency")
 public class CurrencyController {
 
-    private static final Logger log = LoggerFactory.g
+    private static final Logger log = LoggerFactory.getLogger(CurrencyController.class);
 }
