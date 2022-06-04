@@ -30,8 +30,7 @@ public class CurrencyConversionService {
         if(null == codeRate || null == baseRate)
             throw new Exception("Bad code Base");
 
-
-        return
+        return new CurrencyConversion(base,code,amount,(codeRate.getRate()/baseRate.getRate()) * amount)
 
     }
 
