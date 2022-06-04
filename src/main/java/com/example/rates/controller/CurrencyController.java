@@ -17,5 +17,7 @@ public class CurrencyController {
     @Autowired
     CurrencyConversionService conversionService;
 
+    @RequestMapping("/lastest")
+
 
 }
