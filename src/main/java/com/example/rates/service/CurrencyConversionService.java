@@ -56,7 +56,7 @@ public class CurrencyConversionService {
     }
 
     public void saveRates(Rate[] rates,Date date){
-        Arrays.stream(rates).forEach(rate -> rateRepository.save(new Rate(rate.getCode(),rate.getRate(),date)) );
+        Arrays.stream(rates).forEach(rate -> rateRepository.save(new Rate(rate.getCode(),rate.getRate(),date)));
     }
 
 
