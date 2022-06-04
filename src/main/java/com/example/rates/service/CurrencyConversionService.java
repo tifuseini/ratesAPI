@@ -28,6 +28,7 @@ public class CurrencyConversionService {
             codeRate = rateRepository.findByDateAndCode(new Date(),code);
 
         if(null == codeRate || null == baseRate)
+            throw new Exception("Bad code Base")
 
 
         return
