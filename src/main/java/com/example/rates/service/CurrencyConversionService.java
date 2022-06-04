@@ -14,6 +14,8 @@ public class CurrencyConversionService {
 
     public CurrencyConversion convertFromTo(@ToUpper String base,@ToUpper String code,Float amount) throws Exception{
 
+
+
     }
 
 
