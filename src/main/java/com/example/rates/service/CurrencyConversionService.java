@@ -11,7 +11,7 @@ public class CurrencyConversionService {
     @Autowired
     RateRepository rateRepository;
 
-    public CurrencyConversion convertFromTo
+    public CurrencyConversion convertFromTo(@ToUpper)
 
 
 }
