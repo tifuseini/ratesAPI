@@ -47,7 +47,10 @@ public class CurrencyConversionService {
 
         if(null == baseRate) throw new Exception("Bad Base Code");
 
-        return Stream.concat(rates.stream())
+        return Stream.concat(rates.stream()
+                .filter(n -> !n.getCode().equals(code))
+                .map(n -> new Rate(n.getCode(),n.getRate()/baseRate.getRate(),date)),Stream.of(new Rate(CurrencyExchange.BASE_CODE,1/ baseRate.getRate(),date)))
+                .toArray(size -. new Rate[size]);
 
     }
 
