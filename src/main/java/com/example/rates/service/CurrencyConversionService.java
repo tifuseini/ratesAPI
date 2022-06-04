@@ -41,6 +41,9 @@ public class CurrencyConversionService {
         if(code.equals(CurrencyExchange.BASE_CODE))
             return rates.toArray(new Rate[0]);
 
+        Rate baseRate = rates.stream()
+                .filter(rate -> rate.getCode().equals(code)).findFirst().orElse(null);
+
     }
 
 
