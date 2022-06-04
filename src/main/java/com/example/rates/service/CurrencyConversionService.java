@@ -19,6 +19,10 @@ public class CurrencyConversionService {
     public CurrencyConversion convertFromTo(@ToUpper String base,@ToUpper String code,Float amount) throws Exception{
 
         Rate baseRate = new Rate(CurrencyExchange.BASE_CODE,1.0F,new Date());
+        Rate codeRate = new Rate(CurrencyExchange.BASE_CODE,1.0F,new Date());
+
+
+        return
 
     }
 
