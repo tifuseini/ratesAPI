@@ -24,7 +24,7 @@ public class CurrencyController {
     @Autowired
     CurrencyConversionService conversionService;
 
-    @RequestMapping("/lastest")
+    @GetMapping("/lastest")
     public ResponseEntity<CurrencyExchange> getLatest(@RequestParam(name="base",defaultValue=CurrencyExchange.BASE_CODE)String base) throws Exception{
         log.info("Number 1");
         return new ResponseEntity<CurrencyExchange>(new CurrencyExchange(base,
