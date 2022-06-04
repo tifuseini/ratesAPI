@@ -36,7 +36,9 @@ public class CurrencyController {
 
     @RequestMapping("/{date}")
     public ResponseEntity<CurrencyExchange> getByDate(@PathVariable("date") @DateTimeFormat(pattern="yyyy-MM-dd") Date date, @RequestParam(name="base",defaultValue=CurrencyExchange.BASE_CODE)String base) throws Exception{
-        return new ResponseEntity<CurrencyExchange>(new CurrencyExchange(base,new SimpleDateFormat("yyyy-MM-dd").format(date),service.calculateByCode(base,date)),HttpStatus.OK);
+        return new ResponseEntity<CurrencyExchange>(new CurrencyExchange(base,
+                new SimpleDateFormat("yyyy-MM-dd").format(date),
+                conversionService.calculateByCode(base,date)),HttpStatus.OK);
     }
 
 
