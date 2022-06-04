@@ -1,2 +1,5 @@
-package com.example.rates.controller;public class CurrencyController {
+package com.example.rates.controller;
+
+
+public class CurrencyController {
 }
