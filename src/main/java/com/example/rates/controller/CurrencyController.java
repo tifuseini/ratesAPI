@@ -32,7 +32,7 @@ public class CurrencyController {
                 conversionService.calculateByCode(base,new Date())),HttpStatus.OK);
     }
 
-    @RequestMapping("/{date}")
+    @GetMapping("/{date}")
     public ResponseEntity<CurrencyExchange> getByDate(@PathVariable("date") @DateTimeFormat(pattern="yyyy-MM-dd") Date date, @RequestParam(name="base",defaultValue=CurrencyExchange.BASE_CODE)String base) throws Exception{
         log.info("Number 2");
         return new ResponseEntity<CurrencyExchange>(new CurrencyExchange(base,
@@ -40,14 +40,14 @@ public class CurrencyController {
                 conversionService.calculateByCode(base,date)),HttpStatus.OK);
     }
 
-    @RequestMapping("/{amount}/{base}/to/{code}")
+    @GetMapping("/{amount}/{base}/to/{code}")
     public ResponseEntity<CurrencyConversion> conversion(@PathVariable("amount")Float amount,@PathVariable("base")String base,@PathVariable("code")String code) throws Exception{
         CurrencyConversion conversionResult = conversionService.convertFromTo(base, code, amount);
         log.info("Number 3");
         return new ResponseEntity<CurrencyConversion>(conversionResult,HttpStatus.OK);
     }
 
-    @RequestMapping(path="/new",method = {RequestMethod.POST})
+    @PostMapping(path="/new")
     public ResponseEntity<CurrencyExchange> addNewRates(@RequestBody CurrencyExchange currencyExchange) throws Exception{
         try{
             final Date date = new SimpleDateFormat("yyyy-MM-dd").parse(currencyExchange.getDate());
