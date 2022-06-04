@@ -8,4 +8,6 @@ public class CurrencyConversion {
 
     private float amount;
 
+    private float total;
+
 }
