@@ -1,5 +1,6 @@
 package com.example.rates;
 
+import com.example.rates.domain.Rate;
 import com.example.rates.repo.RateRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
