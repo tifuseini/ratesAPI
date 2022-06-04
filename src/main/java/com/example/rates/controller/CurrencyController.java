@@ -2,6 +2,7 @@ package com.example.rates.controller;
 
 import com.example.rates.domain.CurrencyConversion;
 import com.example.rates.domain.CurrencyExchange;
+import com.example.rates.domain.Rate;
 import com.example.rates.service.CurrencyConversionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
