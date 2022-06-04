@@ -8,6 +8,7 @@ import com.example.rates.repo.RateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Stream;
@@ -54,7 +55,9 @@ public class CurrencyConversionService {
 
     }
 
-    public void saveRates(Rate[] rates,Date date)
+    public void saveRates(Rate[] rates,Date date){
+        Arrays.stream(rates)
+    }
 
 
 }
