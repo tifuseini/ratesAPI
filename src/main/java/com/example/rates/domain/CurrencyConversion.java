@@ -4,5 +4,7 @@ public class CurrencyConversion {
     
     private String base;
 
-    p
+    private String code;
+
+
 }
