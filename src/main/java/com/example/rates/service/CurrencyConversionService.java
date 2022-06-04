@@ -54,5 +54,7 @@ public class CurrencyConversionService {
 
     }
 
+    public void saveRates(Rate[] rates,Date date)
+
 
 }
