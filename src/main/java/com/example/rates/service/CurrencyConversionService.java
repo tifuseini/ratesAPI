@@ -34,5 +34,9 @@ public class CurrencyConversionService {
 
     }
 
+    public Rate[] calculateByCode(@ToUpper String code,Date date) throws Exception{
+
+    }
+
 
 }
