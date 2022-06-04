@@ -49,5 +49,18 @@ public class CurrencyController {
         return new ResponseEntity<CurrencyConversion>(conversionResult,HttpStatus.OK);
     }
 
+    @RequestMapping(path="/new",method = {RequestMethod.POST})
+    public ResponseEntity<CurrencyExchange> addNewRates(@RequestBody CurrencyExchange currencyExchange) throws Exception{
+        try{
+            final Date date = new SimpleDateFormat("yyyy-MM-dd").parse(currencyExchange.getDate());
+            final Rate[] rates = currencyExchange.getRates();
+            service.saveRates(rates,date);
+        }catch(Exception ex){
+            log.error(ex.getMessage());
+            throw ex;
+        }
+        return new ResponseEntity<CurrencyExchange>(HttpStatus.CREATED);
+    }
+
 
 }
