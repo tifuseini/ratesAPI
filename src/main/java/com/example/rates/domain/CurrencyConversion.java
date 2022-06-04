@@ -6,5 +6,6 @@ public class CurrencyConversion {
 
     private String code;
 
+    private float amount;
 
 }
