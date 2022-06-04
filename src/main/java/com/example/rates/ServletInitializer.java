@@ -1,4 +1,6 @@
 package com.example.rates;
 
-public class ServletInitializer {
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
+public class ServletInitializerb extends SpringBootServletInitializer {
 }
