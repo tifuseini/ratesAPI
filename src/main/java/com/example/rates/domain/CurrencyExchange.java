@@ -13,6 +13,4 @@ public class CurrencyExchange {
 
     private Rate[] rates;
 
-
-
 }
