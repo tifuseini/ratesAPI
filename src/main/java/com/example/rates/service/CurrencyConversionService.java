@@ -44,7 +44,9 @@ public class CurrencyConversionService {
         Rate baseRate = rates.stream()
                 .filter(rate -> rate.getCode().equals(code)).findFirst().orElse(null);
 
-        if(null == baseRate) throw
+        if(null == baseRate) throw new Exception("Bad Base Code");
+
+        return
 
     }
 
