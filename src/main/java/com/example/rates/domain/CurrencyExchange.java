@@ -6,7 +6,7 @@ public class CurrencyExchange {
 
     private String base;
 
-
+    private String date;
 
 
 
