@@ -52,7 +52,7 @@ public class CurrencyController {
         try{
             final Date date = new SimpleDateFormat("yyyy-MM-dd").parse(currencyExchange.getDate());
             final Rate[] rates = currencyExchange.getRates();
-            service.saveRates(rates,date);
+            conversionService.saveRates(rates,date);
         }catch(Exception ex){
             log.error(ex.getMessage());
             throw ex;
