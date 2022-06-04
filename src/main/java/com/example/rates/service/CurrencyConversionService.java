@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Stream;
 
 @Service
 public class CurrencyConversionService {
@@ -46,7 +47,7 @@ public class CurrencyConversionService {
 
         if(null == baseRate) throw new Exception("Bad Base Code");
 
-        return
+        return Stream.concat(rates.stream())
 
     }
 
