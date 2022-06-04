@@ -6,6 +6,7 @@ import com.example.rates.service.CurrencyConversionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +31,11 @@ public class CurrencyController {
         return new ResponseEntity<CurrencyExchange>(new CurrencyExchange(base,
                 new SimpleDateFormat("yyyy-MM-dd").format(new Date()),
                 conversionService.calculateByCode(base,new Date())),HttpStatus.OK);
+    }
+
+    @RequestMapping("/{date}")
+    public ResponseEntity<CurrencyExchange> getByDate(@PathVariable("date") @DateTimeFormat(pattern="yyyy-MM-dd") Date date, @RequestParam(name="base",defaultValue=CurrencyExchange.BASE_CODE)String base) throws Exception{
+        return new ResponseEntity<CurrencyExchange>(new CurrencyExchange(base,new SimpleDateFormat("yyyy-MM-dd").format(date),service.calculateByCode(base,date)),HttpStatus.OK);
     }
 
 
