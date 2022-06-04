@@ -6,7 +6,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 public class ServletInitializerb extends SpringBootServletInitializer {
 
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(RestApiDemoApplication.class);
+        return application.sources(RatesApplication.class);
     }
 
 }
