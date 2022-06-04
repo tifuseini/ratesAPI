@@ -22,7 +22,7 @@ public class CurrencyConversionService {
         Rate codeRate = new Rate(CurrencyExchange.BASE_CODE,1.0F,new Date());
 
         if (!CurrencyExchange.BASE_CODE.equals(base))
-            baseRate = rateRepository.findByDateAndCode(new Date(),base)
+            baseRate = rateRepository.findByDateAndCode(new Date(),base);
 
 
         return
