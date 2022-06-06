@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 @RestController
 @RequestMapping("/currency")
 public class CurrencyController {
@@ -24,7 +25,7 @@ public class CurrencyController {
     @Autowired
     CurrencyConversionService conversionService;
 
-    @GetMapping("/lastest")
+    @GetMapping("/latest")
     public ResponseEntity<CurrencyExchange> getLatest(@RequestParam(name="base",defaultValue=CurrencyExchange.BASE_CODE)String base) throws Exception{
         log.info("Number 1");
         return new ResponseEntity<CurrencyExchange>(new CurrencyExchange(base,
