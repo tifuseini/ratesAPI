@@ -48,6 +48,7 @@ public class CurrencyController {
         return new ResponseEntity<CurrencyConversion>(conversionResult,HttpStatus.OK);
     }
 
+
     @PostMapping(path="/new")
     public ResponseEntity<CurrencyExchange> addNewRates(@RequestBody CurrencyExchange currencyExchange) throws Exception{
         try{
